@@ -1,0 +1,96 @@
+<resources>
+
+
+    
+  <fitContributions>
+    <fitField id="3"
+      displayInChart="true"
+      displayInActivityLaps="false"
+      displayInActivitySummary="false"
+      sortOrder="1"
+      precision="1"
+      chartTitle="@Strings.SHRPWR"
+      dataLabel="@Strings.SHRPWR"
+      unitLabel="@Strings.EUnits"
+      fillColor="#80cdc1" />
+    <fitField id="4"
+      displayInChart="true"
+      displayInActivityLaps="false"
+      displayInActivitySummary="false"
+      sortOrder="2"
+      precision="2"
+      chartTitle="@Strings.CardiacCostTitle"
+      dataLabel="@Strings.CardiacCostLabel"
+      unitLabel="@Strings.CardiacCostUnits"
+      fillColor="#018571" />
+    <fitField id="0"
+      displayInChart="true"
+      displayInActivityLaps="false"
+      displayInActivitySummary="false"
+      sortOrder="3"
+      precision="0"
+      chartTitle="@Strings.Pwr"
+      dataLabel="@Strings.Pwr"
+      unitLabel="@Strings.Watts"
+      fillColor="#a6611a" />
+    <fitField id="1"
+      displayInChart="true"
+      displayInActivityLaps="false"
+      displayInActivitySummary="false"
+      sortOrder="4"
+      precision="0"
+      chartTitle="@Strings.SPwr"
+      dataLabel="@Strings.SPwr"
+      unitLabel="@Strings.Watts"
+      fillColor="#dfc27d" />
+    <fitField id="2"
+      displayInChart="true"
+      displayInActivityLaps="false"
+      displayInActivitySummary="false"
+      sortOrder="5"
+      precision="1"
+      chartTitle="@Strings.SHR"
+      dataLabel="@Strings.SHR"
+      unitLabel="@Strings.BPM"
+      fillColor="#f5f5f5" />
+  </fitContributions>
+
+
+  <properties>
+    <property id="ZeroPowerHR" type="number">45</property>
+  	<property id="HrPwrSmoothing" type="number">5</property>
+  	<property id="HrPwrDelay" type="number">2</property>
+  </properties>
+
+
+	<strings>
+	    <string id="ZeroPowerHRTitle">Heart Rate at Zero Power</string>
+	    <string id="ZeroPowerHRPrompt">HR at 0 watts</string>
+		<string id="HrPwrSmoothingTitle">HrPwr Smoothing</string>
+		<string id="HrPwrSmoothingPrompt">Seconds of smoothing to apply to HrPwr</string>
+		<string id="HrPwrDelayTitle">HrPwr Delay of Power</string>
+		<string id="HrPwrDelayPrompt">Seconds to delay Power before calculating HrPwr as HR responds more slowly</string>
+		<string id="Pwr">Raw Power</string>
+		<string id="SPwr">Smoothed Power</string>
+		<string id="SHR">Smoothed HR</string>
+		<string id="SHRPWR">Smoothed HrPwr</string>
+		<string id="Watts">Watts</string>
+		<string id="BPM">BPM</string>
+		<string id="EUnits">mW.HR-1</string>
+		<string id="CardiacCostTitle">Cardiac Cost (Billat)</string>
+		<string id="CardiacCostLabel">CC</string>
+		<string id="CardiacCostUnits">HR.S.M-1</string>
+    </strings>
+
+  <settings>
+    <setting propertyKey="@Properties.ZeroPowerHR" title="@Strings.ZeroPowerHRTitle" prompt="@Strings.ZeroPowerHRPrompt">
+		<settingConfig type="numeric" min="20" max="200" />
+    </setting>
+    <setting propertyKey="@Properties.HrPwrSmoothing" title="@Strings.HrPwrSmoothingTitle" prompt="@Strings.HrPwrSmoothingPrompt">
+		<settingConfig type="numeric" min="2" max="180" />
+    </setting>
+    <setting propertyKey="@Properties.HrPwrDelay" title="@Strings.HrPwrDelayTitle" prompt="@Strings.HrPwrDelayPrompt">
+		<settingConfig type="numeric" min="2" max="100" />
+    </setting>
+  </settings>
+</resources>
